@@ -5,7 +5,7 @@ Deze API biedt functionaliteit om afwezigheden (absences) te beheren, inclusief 
 ## Basis-URL
 
 ```plaintext
-https://yourdomain.com/api
+https://flashlearn.nl/api
 ```
 
 ## Endpoints Overzicht
