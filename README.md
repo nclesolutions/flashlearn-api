@@ -40,11 +40,6 @@ Haal een lijst op van alle werkstukken, eventueel gefilterd op een specifiek vak
                 "content": "Inhoud van het werkstuk...",
                 "owner_id": 1,
                 "unique_id": "abcd1234-5678-90ef-ghij-klmn1234opqr",
-                "creator": {
-                    "id": 1,
-                    "name": "John Doe",
-                    "email": "john.doe@example.com"
-                },
                 "total_characters": 456
             }
             // Meer werkstukken...
@@ -73,11 +68,6 @@ Haal de details op van een specifiek werkstuk op basis van zijn unieke ID.
             "content": "Inhoud van het werkstuk...",
             "owner_id": 1,
             "unique_id": "abcd1234-5678-90ef-ghij-klmn1234opqr"
-        },
-        "creator": {
-            "id": 1,
-            "name": "John Doe",
-            "email": "john.doe@example.com"
         }
     }
     ```
