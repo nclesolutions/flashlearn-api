@@ -1,5 +1,8 @@
 # Absence Management API Documentatie
+
 **Laatste Update:** *8/25/2024*
+
+## Inleiding
 
 Deze API biedt functionaliteit om afwezigheden (absences) te beheren, inclusief het ophalen van alle afwezigheden voor de ingelogde gebruiker en het bekijken van een specifieke afwezigheid.
 
