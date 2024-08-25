@@ -1,5 +1,3 @@
-Hier is een documentatie voor de API-endpoints die beschikbaar zijn in de `ProjectController`. Deze documentatie bevat de details van elk endpoint, inclusief de URL, HTTP-methode, vereiste parameters, en verwachte responses.
-
 ---
 
 # Project Management API Documentatie
