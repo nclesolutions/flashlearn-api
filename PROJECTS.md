@@ -173,5 +173,3 @@ Haal een lijst op van alle beschikbare vakken die ten minste één werkstuk hebb
         ]
     }
     ```
-
----
