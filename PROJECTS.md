@@ -1,5 +1,9 @@
 # Project Management API Documentatie
 
+**Laatste Update:** *8/25/2024*
+
+## Inleiding
+
 Deze API biedt functionaliteit om werkstukken (projects) te beheren, inclusief het ophalen, aanmaken, bijwerken, en verwijderen van werkstukken. Daarnaast biedt de API de mogelijkheid om beschikbare vakken op te halen.
 
 ## Basis-URL
