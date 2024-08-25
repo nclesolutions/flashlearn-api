@@ -1,5 +1,9 @@
 # Rooster API Documentatie
 
+**Laatste Update:** *8/25/2024*
+
+## Inleiding
+
 Deze API biedt functionaliteit om het rooster van de huidige week op te halen. De response bevat het rooster voor elke dag van de week, inclusief details over de lessen, locaties, en docenten.
 
 ## Basis-URL
