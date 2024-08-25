@@ -25,7 +25,7 @@ Totdat de Grades API beschikbaar is, raden we aan om de volgende alternatieven t
    - Schrijf je in voor onze nieuwsbrief of meld je aan voor API-statusmeldingen om direct op de hoogte te worden gehouden wanneer de Grades API beschikbaar komt.
 
 3. **Contact met Ondersteuning:**
-   - Voor specifieke verzoeken of vragen over cijfers kunnen gebruikers contact opnemen met onze ondersteuning via [support@yourdomain.com](mailto:support@yourdomain.com).
+   - Voor specifieke verzoeken of vragen over cijfers kunnen gebruikers contact opnemen met onze ondersteuning via [support@nclesolutions.com](mailto:support@nclesolutions.com).
 
 ### Verwachte Hersteltermijn
 
