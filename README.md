@@ -1,5 +1,9 @@
 # API Documentatie Overzicht
 
+**Laatste Update:** *8/25/2024*
+
+## Inleiding
+
 Welkom bij de API-documentatie van FlashLearn. Hieronder vind je een overzicht van alle beschikbare API's. Klik op de naam van de API om naar de volledige documentatie te gaan.
 
 ## Beschikbare API's
