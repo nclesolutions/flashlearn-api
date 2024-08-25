@@ -9,7 +9,7 @@ De School API biedt endpoints waarmee gebruikers informatie over hun school en r
 ## Basis-URL
 
 ```plaintext
-https://yourdomain.com/api
+https://flashlearn.nl/api
 ```
 
 ## Endpoints Overzicht
