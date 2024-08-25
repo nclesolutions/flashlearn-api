@@ -82,28 +82,6 @@ Haal de details op van een specifieke afwezigheid voor de ingelogde gebruiker, e
             "gemaakt_date": "2024-01-01",
             "description": "Ziek",
             ...
-        },
-        "groupedResults": {
-            "01_Januari_2024": [
-                {
-                    "id": 1,
-                    "unique_id": "abc123",
-                    "user_id": 1,
-                    "gemaakt_date": "2024-01-01",
-                    "description": "Ziek",
-                    ...
-                }
-            ],
-            "02_Februari_2024": [
-                {
-                    "id": 2,
-                    "unique_id": "def456",
-                    "user_id": 1,
-                    "gemaakt_date": "2024-02-02",
-                    "description": "Afwezig",
-                    ...
-                }
-            ]
         }
     }
     ```
@@ -117,7 +95,6 @@ Haal de details op van een specifieke afwezigheid voor de ingelogde gebruiker, e
 ### Beschrijving van de Response:
 
 - **`absence`**: De details van de specifieke afwezigheid die is opgevraagd.
-- **`groupedResults`**: Een object waarin de sleutels datums zijn (geformatteerd zonder spaties, bijvoorbeeld `"02_Februari_2024"`) en de waarden arrays zijn van alle afwezigheden van de gebruiker, gegroepeerd op datum.
 
 ### Error Response
 - **404 Not Found**: Als de afwezigheid met het opgegeven ID niet bestaat of niet toebehoort aan de ingelogde gebruiker.
