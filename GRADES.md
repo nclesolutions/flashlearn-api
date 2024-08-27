@@ -1,51 +1,109 @@
-# Grades API Documentatie
+# FlashLearn API Documentatie: Grades Management
 
-## Status: Momenteel Niet Beschikbaar
+**Laatste Update:** *8/27/2024*
 
-**Laatste Update:** *8/25/2024*
+## Inleiding
 
----
+Deze API biedt functionaliteit om cijfers (grades) te beheren, inclusief het ophalen van alle cijfers voor de ingelogde gebruiker en het bekijken van een specifiek cijfer.
 
-### Inleiding
+## Basis-URL
 
-De Grades API, die bedoeld is om cijfers en gerelateerde informatie op te halen, is momenteel niet beschikbaar. We werken hard aan het verbeteren van deze functie om ervoor te zorgen dat deze in de toekomst naadloos integreert met onze systemen en voldoet aan de hoogste kwaliteitseisen.
+```plaintext
+https://flashlearn.nl/api
+```
 
-### Wat Betekent Dit?
+## Endpoints Overzicht
 
-Op dit moment zijn de endpoints die verband houden met de Grades API niet toegankelijk. Pogingen om deze endpoints te benaderen, zullen resulteren in een foutmelding die aangeeft dat de service niet beschikbaar is.
-
-### Beschikbare Alternatieven
-
-Totdat de Grades API beschikbaar is, raden we aan om de volgende alternatieven te overwegen:
-
-1. **Handmatige Toegang via het Dashboard:**
-   - Gebruikers kunnen hun cijfers en gerelateerde informatie direct via het webdashboard bekijken.
-   
-2. **Notificaties over Updates:**
-   - Schrijf je in voor onze nieuwsbrief of meld je aan voor API-statusmeldingen om direct op de hoogte te worden gehouden wanneer de Grades API beschikbaar komt.
-
-3. **Contact met Ondersteuning:**
-   - Voor specifieke verzoeken of vragen over cijfers kunnen gebruikers contact opnemen met onze ondersteuning via [support@nclesolutions.com](mailto:support@nclesolutions.com).
-
-### Verwachte Hersteltermijn
-
-We verwachten dat de Grades API binnen de komende weken beschikbaar zal zijn. Zodra de service live gaat, zullen we uitgebreide documentatie en ondersteuning bieden om je te helpen bij de integratie van de API in jouw projecten.
-
-### Contact en Support
-
-Mocht je vragen hebben of behoefte hebben aan verdere informatie, neem dan gerust contact met ons op:
-
-- **Email:** [support@nclesolutions.com](mailto:support@nclesolutions.com)
-- **Website:** [www.nclesolutions.com](http://www.nclesolutions.com)
-
-Blijf op de hoogte van updates door onze officiële communicatiekanalen te volgen. We waarderen je geduld en werken hard om de Grades API zo snel mogelijk beschikbaar te maken.
+### 1. [Haal alle cijfers op](#1-haal-alle-cijfers-op)
+### 2. [Bekijk een specifiek cijfer](#2-bekijk-een-specifiek-cijfer)
 
 ---
 
-### Dank voor je Begrip
+## 1. Haal alle cijfers op
 
-We begrijpen dat deze onderbreking ongemak kan veroorzaken en we stellen je geduld zeer op prijs. We zijn toegewijd aan het leveren van een betrouwbare en hoogwaardige API-service en kijken ernaar uit om de vernieuwde Grades API binnenkort aan je beschikbaar te stellen.
+Haal een lijst op van alle cijfers voor de ingelogde gebruiker. De cijfers worden gegroepeerd op vak.
 
---- 
+- **URL**: `/grades`
+- **Methode**: `GET`
+- **Headers**:
+  - `Authorization: Bearer <access_token>`
+- **Response**:
+  - **200 OK**: 
+    ```json
+    {
+        "grades": {
+            "Mathematics": [
+                {
+                    "id": 1,
+                    "unique_id": "abc123",
+                    "user_id": 1,
+                    "course_id": 101,
+                    "grade": "A",
+                    "teacher_id": 201,
+                    "date_awarded": "2024-08-15",
+                    "remarks": "Excellent performance"
+                    ...
+                }
+            ],
+            "Science": [
+                {
+                    "id": 2,
+                    "unique_id": "def456",
+                    "user_id": 1,
+                    "course_id": 102,
+                    "grade": "B+",
+                    "teacher_id": 202,
+                    "date_awarded": "2024-08-20",
+                    "remarks": "Good effort"
+                    ...
+                }
+            ]
+        }
+    }
+    ```
 
-**Houd deze pagina in de gaten voor toekomstige updates over de beschikbaarheid van de Grades API.**
+### Beschrijving van de Response:
+
+- **`grades`**: Een object waarin de sleutels de namen van de vakken zijn (bijvoorbeeld `"Mathematics"`) en de waarden arrays zijn van cijfers die voor die vakken zijn geregistreerd.
+- **Vak Naam**: De vakken worden gegroepeerd op basis van hun naam, waarbij elk vak een array van cijfers bevat.
+
+## 2. Bekijk een specifiek cijfer
+
+Haal de details op van een specifiek cijfer voor de ingelogde gebruiker.
+
+- **URL**: `/grades/{id}`
+- **Methode**: `GET`
+- **Headers**:
+  - `Authorization: Bearer <access_token>`
+- **URL Parameters**:
+  - `id` (vereist): De unieke ID (`unique_id`) van het cijfer dat je wilt bekijken.
+- **Response**:
+  - **200 OK**:
+    ```json
+    {
+        "grade": {
+            "id": 1,
+            "unique_id": "abc123",
+            "user_id": 1,
+            "course_id": 101,
+            "grade": "A",
+            "teacher_id": 201,
+            "date_awarded": "2024-08-15",
+            "remarks": "Excellent performance"
+            ...
+        }
+    }
+    ```
+  - **404 Not Found**:
+    ```json
+    {
+        "error": "Cijfer niet gevonden"
+    }
+    ```
+
+### Beschrijving van de Response:
+
+- **`grade`**: De details van het specifieke cijfer dat is opgevraagd.
+
+### Error Response
+- **404 Not Found**: Als het cijfer met het opgegeven ID niet bestaat of niet toebehoort aan de ingelogde gebruiker.
