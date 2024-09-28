@@ -1,3 +1,5 @@
+# Het kan zijn dat sommige endpoints niet werken.. We zijn er mee bezig!!
+
 # API Documentatie Overzicht
 
 **Laatste Update:** *8/25/2024*
